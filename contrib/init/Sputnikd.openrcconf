@@ -1,0 +1,26 @@
+# /etc/conf.d/Sputnikd: config file for /etc/init.d/Sputnikd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/Sputnik/Sputnik.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/Sputnikd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/Sputnikd.pid"
+
+# Where to write Sputnikd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/Sputnikd"
+
+# User and group to own Sputnikd process
+#BITCOIND_USER="Sputnik"
+#BITCOIND_GROUP="Sputnik"
+
+# Path to Sputnikd executable
+#BITCOIND_BIN="/usr/bin/Sputnikd"
+
+# Nice value to run Sputnikd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

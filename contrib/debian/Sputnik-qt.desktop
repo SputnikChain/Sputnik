@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Sputnik
+Comment=Sputnik P2P Cryptocurrency
+Comment[fr]=Sputnik, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Sputnik, eşten eşe kriptografik sanal para birimi
+Exec=Sputnik-qt %u
+Terminal=false
+Type=Application
+Icon=Sputnik128
+MimeType=x-scheme-handler/Sputnik;
+Categories=Office;Finance;

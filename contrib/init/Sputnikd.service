@@ -1,0 +1,26 @@
+[Unit]
+Description=Sputnik's distributed currency daemon
+After=network.target
+
+[Service]
+User=Sputnik
+Group=Sputnik
+
+Type=Sputnik
+PIDFile=/var/lib/Sputnikd/Sputnikd.pid
+
+ExecStart=/usr/bin/Sputnikd -daemon -pid=/var/lib/Sputnikd/Sputnikd.pid \
+          -conf=/etc/Sputnik/Sputnik.conf -datadir=/var/lib/Sputnikd
+
+ExecStop=-/usr/bin/Sputnik-cli -conf=/etc/Sputnik/Sputnik.conf \
+         -datadir=/var/lib/Sputnikd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
